@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+
+def projects(request):
+    return HttpResponse("Hello, world. You're at the projects page.")
+
+def project(request, pk):
+    return HttpResponse("Hello, world. Single project number: " + pk)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('projects/', projects, name='projects'),
+    path('project/<str:pk>/', project, name='project'),
 ]
