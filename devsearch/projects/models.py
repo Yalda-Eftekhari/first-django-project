@@ -32,7 +32,7 @@ class Review(models.Model):
                             unique=True, editable=False)
     
     def __str__(self):
-        return self.value
+        return self.value 
 
 
 class Tag(models.Model):
