@@ -14,10 +14,6 @@ class Project(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4,
                             unique=True, editable=False)
     
-    # technology = models.CharField(max_length=200)
-    # image = models.ImageField(upload_to='projects/')
-    # url = models.URLField(blank=True)
-
     def __str__(self):
         return self.title
 
